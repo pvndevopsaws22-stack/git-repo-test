@@ -15,3 +15,5 @@ git config --global --list
 git config --show-origin --get user.name
 ## This shows the configuration file containing the username.
 
+git config --show-origin --get user.email
+## This shows the configuration file containing the email
