@@ -59,3 +59,17 @@ git revert <commit-id>
 
 Prefer `git revert` for commits that have already been shared with others. It
 preserves the existing history and records the undo as a new commit.
+
+## Apply a commit from another branch
+
+```bash
+# Switch to the branch that should receive the commit.
+git switch <target-branch>
+
+# Apply the selected commit and create a new commit on the current branch.
+git cherry-pick <commit-id>
+```
+
+To apply multiple commits, provide a commit range or list the commit IDs.
+If a conflict occurs, resolve it and run `git cherry-pick --continue`; use
+`git cherry-pick --abort` to cancel the operation.
